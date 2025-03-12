@@ -18,7 +18,8 @@ Este projeto contém uma query avançada em SQL (PostgreSQL) para encontrar o **
 
 
 ##  🔍Estrutura apenas para a pesquisa:
-```WITH ranking AS (
+```
+WITH ranking AS (
     SELECT 
         valor,
         RANK() OVER (ORDER BY valor DESC) AS rank_pos
@@ -26,7 +27,8 @@ Este projeto contém uma query avançada em SQL (PostgreSQL) para encontrar o **
 )
 SELECT valor
 FROM ranking
-WHERE rank_pos = 2;  -- Altere este valor para o "k" desejado```
+WHERE rank_pos = 2;  -- Altere este valor para o "k" desejado
+```
 
 ## 📝 O que significa "k-ésimo maior valor"?
 - O 1º maior valor é o maior valor da tabela.
